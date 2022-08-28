@@ -19,7 +19,11 @@ Besides the algorithms, the package also provides corresponding data generations
 The package contains two parts as mentioned above, MM_algorithm and Data_generation.
 
 ### MM_algorithm <a name="mm_alg"></a>
-
+The input & output list for consultation.
+|Inputs.         |
+|name|discription|
+|----|-----------|
 
 ### Data_generation <a name="data_generation"></a>
+The input & output list for consultation.
 
