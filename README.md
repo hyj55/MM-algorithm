@@ -16,8 +16,10 @@ Besides the algorithms, the package also provides corresponding data generations
 
 
 ## Usage <a name="useage"></a>
+The package contains two parts as mentioned above, MM_algorithm and Data_generation.
 
 ### MM_algorithm <a name="mm_alg"></a>
+
 
 ### Data_generation <a name="data_generation"></a>
 
