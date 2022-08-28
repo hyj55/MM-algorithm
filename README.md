@@ -10,7 +10,7 @@
 ## General Informations <a name="general_info"></a>
 A package for MM algorithm for solving MLE of latent scores of each player in pairwise comprison models.\
 Note that the pairwise compirisons are measured on an ordinal scale. The package contains algorithms for models supporting the ordinal scale of levels J=2,3,4,5.\
-Besides the algorithms, the package also provides corresponding data generations for simulation usage.
+Besides the algorithms, the package also provides corresponding data generations for simulation use.
 
 ## Installation <a name="install"></a>
 
