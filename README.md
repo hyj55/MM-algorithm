@@ -18,8 +18,8 @@ Besides the algorithms, the package also provides corresponding data generations
 ## Usage <a name="useage"></a>
 The package contains two parts as mentioned above, MM_algorithm and Data_generation.
 
-### MM_algorithm <a name="mm_alg"></a>
-The lists of functions with their corresponding inputs & outputs for consultation.
+### Class MM_algorithm <a name="mm_alg"></a>
+The lists of functions with their corresponding inputs & outputs in ***Class MM_algorithm*** for consultation.
 #### functions
 |function name|discription|inputs|outputs|
 |-------------|-----------|------|-------|
@@ -28,6 +28,15 @@ The lists of functions with their corresponding inputs & outputs for consultatio
 |Davidson_given_theta(iteration=1000,error=1e-9,theta=1)|MM algorithm for Davidson Model, only for J=3 cases, theta is given|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error),<br>theta(another parameter in model for allowing existance of ties) <br>**class input**:<br>size<br>graphs for J=3|estimation|
 |Rao_Kupper(iteration=1000,error=1e-9)|MM algorithm for Rao-Kupper Model, only for J=3 cases, theta is to be estimated|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error)<br> **class input**:<br>size<br>graphs for J=3|estimation, estimation_theta|
 |Rao_Kupper_given_theta(self,iteration=1000,error=1e-9,theta=1.5)(iteration=1000,error=1e-9,theta=1)|MM algorithm for Rao-Kupper Model, only for J=3 cases, theta is given|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error),<br>theta<br>**class input**:<br>size<br>graphs for J=3|estimation|
+|clm(iteration=50000,error=1e-6)|MM algorithm for Cumulative Link Model, only for J=4 cases, theta is to be estimated|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error)<br> **class input**:<br>size<br>graphs for J=4|estimation, estimation_theta|
+|clm_given_theta(iteration=5000,error=1e-6,theta=2)|MM algorithm for Cumulative Link Model, only for J=4 cases, theta is given|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error)<br> theta <br>**class input**:<br>size<br>graphs for J=4|estimation|
+|aclm(iteration=5000,error=1e-6)|MM algorithm for Adjacent Categories Logit Model, only for J=4 cases, theta is to be estimated|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error)<br> **class input**:<br>size<br>graphs for J=4|estimation, estimation_theta|
+|aclm_given_theta(iteration=5000,error=1e-6,theta=2)|MM algorithm for Adjacent Categories Logit Model, only for J=4 cases, theta is given|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error)<br> theta <br>**class input**:<br>size<br>graphs for J=4|estimation|
+|clm_5(iteration=50000,error=1e-6)|MM algorithm for Cumulative Link Model, only for J=5 cases, thetas are to be estimated|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error)<br> **class input**:<br>size<br>graphs for J=5|estimation, estimation_theta_1, estimation_theta_2|
+|clm_5_given_theta(iteration=50000,error=1e-6,theta_1=3,theta_2=3)|MM algorithm for Cumulative Link Model, only for J=5 cases, thetas are given|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error)<br> theta_1, theta_2 <br>**class input**:<br>size<br>graphs for J=5|estimation|
+|aclm_5(iteration=50000,error=1e-6)|MM algorithm for Adjacent Categories Logit Model, only for J=5 cases, thetas are to be estimated|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error)<br> **class input**:<br>size<br>graphs for J=5|estimation, estimation_theta_1, estimation_theta_2|
+|aclm_5_given_theta(self,iteration=50000,error=1e-6,theta_1=3,theta_2=3)|MM algorithm for Adjacent Categories Logit Model, only for J=5 cases, thetas are given|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error)<br> theta_1, theta_2 <br>**class input**:<br>size<br>graphs for J=5|estimation|
+|||||
 #### Input for ***class MMAlgorithm***
 |name|discription|
 |----|-----------|
@@ -36,8 +45,11 @@ The lists of functions with their corresponding inputs & outputs for consultatio
 #### Output parameters
 |name|discription|
 |----|-----------|
-|||
+|estimation|***ndarray of shape (size,)***<br> The estimated value of latent scores of players|
+|estimation_theta||
+|estimation_theta_1||
+|estimation_theta_2||
 
-### Data_generation <a name="data_generation"></a>
-The input & output list for consultation.
+### Class Data_generation <a name="data_generation"></a>
+The lists of functions with their corresponding inputs & outputs in ***Class Data_generation*** for consultation.
 
