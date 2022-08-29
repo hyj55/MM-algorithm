@@ -19,7 +19,7 @@ Besides the algorithms, the package also provides corresponding data generations
 The package contains two parts as mentioned above, MM_algorithm and Data_generation.
 
 ### Class MM_algorithm <a name="mm_alg"></a>
-The lists of functions with their corresponding inputs & outputs in ***Class MM_algorithm*** for consultation.
+The list of functions with their corresponding inputs & outputs in ***Class MM_algorithm*** for consultation.
 #### functions
 |function name|discription|inputs|outputs|
 |-------------|-----------|------|-------|
@@ -36,19 +36,28 @@ The lists of functions with their corresponding inputs & outputs in ***Class MM_
 |clm_5_given_theta(iteration=50000,error=1e-6,theta_1=3,theta_2=3)|MM algorithm for Cumulative Link Model, only for J=5 cases, thetas are given|**function input**: <br>-*iteration*(num_iteration),<br> -*error*(l inf norm of gamma estimation error)<br> -*theta_1*, *theta_2* <br>**class input**:<br>-*size*<br>-*graphs* for J=5|estimation|
 |aclm_5(iteration=50000,error=1e-6)|MM algorithm for Adjacent Categories Logit Model, only for J=5 cases, thetas are to be estimated|**function input**: <br>-*iteration*(num_iteration),<br> -*error*(l inf norm of gamma estimation error)<br> **class input**:<br>-*size*<br>-*graphs* for J=5|estimation, estimation_theta_1, estimation_theta_2|
 |aclm_5_given_theta(self,iteration=50000,error=1e-6,theta_1=3,theta_2=3)|MM algorithm for Adjacent Categories Logit Model, only for J=5 cases, thetas are given|**function input**: <br>-*iteration*(num_iteration),<br> -*error*(l inf norm of gamma estimation error)<br> -*theta_1*, *theta_2* <br>**class input**:<br>-*size*<br>-*graphs* for J=5|estimation|
-|||||
-#### Input for ***class MMAlgorithm***
+|check_assumption_3_no_tie()|check Assumption 3, only for J=2 cases|no function input<br>**class input**:<br>-*size*<br>-*graphs* for J=2|index|
+|check_assumption_3|check Assumption 3, only for J=3 cases|no function input<br>**class input**:<br>-*size*<br>-*graphs* for J=3|index|
+|check_assumption_1|check Assumption 1, only for J=3 cases|no function input<br>**class input**:<br>-*size*<br>-*graphs* for J=3|index|
+
+Detailed discriptions for inputs & outputs of class and its functions are listed below:
+#### Inputs of ***class MMAlgorithm***
 |name|discription|
 |----|-----------|
 |size|***int(>0)*** <br> The number of players|
 |**graphs|***ndarray of shape (size,size)***, *the input format must be:* <br>``` # when J = 5: ```<br> ```graph_1 = graph_1, graph_2 = graph_2, graph_3 = graph_3, graph_4 = graph_4, graph_5 = graph_5; ```<br> ```# when J = 4: ```<br> ```graph_1 = graph_1, graph_2 = graph_2, graph_3 = graph_3, graph_4 = graph_4;``` <br> ```# when J = 3: ```<br>``` win_graph = win_graph, tie_graph = tie_graph;``` <br> ```# when J = 2: ```<br> ```win_graph = win_graph``` <br> The pairwise comparison graphs, record the results of comparisons for each level.<br> i.e. The *ij_th* term of *graph_4* records the number of times the comparisons between players *i* and *j* are measured to be 4.|
-#### Output parameters
+#### Inputs of functions
+|name|discription|
+|----|-----------|
+|||
+#### Outputs of functions
 |name|discription|
 |----|-----------|
 |estimation|***ndarray of shape (size,)***<br> The estimated value of latent scores of players|
 |estimation_theta||
 |estimation_theta_1||
 |estimation_theta_2||
+|index||
 
 ### Class Data_generation <a name="data_generation"></a>
 The lists of functions with their corresponding inputs & outputs in ***Class Data_generation*** for consultation.
