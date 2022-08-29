@@ -23,8 +23,9 @@ The lists of functions with their corresponding inputs & outputs for consultatio
 #### functions
 |function name|discription|inputs|outputs|
 |-------------|-----------|------|-------|
-|mmAlgorithm_bt(self,iteration=1000,error=1e-5)|MM algorithm for Bradely-Terry Model, only for J=2 cases|||
-#### Input parameters
+|mmAlgorithm_bt(iteration=1000,error=1e-5)|MM algorithm for Bradely-Terry Model, only for J=2 cases|**function input**: <br>iteration(num_iteration), error(l inf norm of gamma estimation error)<br> **class input**:<br>graphs for J=2|||
+|||||
+#### Input for ***class MMAlgorithm***
 |name|discription|
 |----|-----------|
 |size|***int(>0)*** <br> The number of players|
