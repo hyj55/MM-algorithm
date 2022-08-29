@@ -21,9 +21,9 @@ The package contains two parts as mentioned above, MM_algorithm and Data_generat
 ### MM_algorithm <a name="mm_alg"></a>
 The lists of functions with their corresponding inputs & outputs for consultation.
 #### functions
-|function name|inputs|outputs|
-|-------------|----------|-----------|
-||||
+|function name|discription|inputs|outputs|
+|-------------|-----------|------|-------|
+|mmAlgorithm_bt(self,iteration=1000,error=1e-5)|MM algorithm for Bradely-Terry Model, only for J=2 cases|||
 #### Input parameters
 |name|discription|
 |----|-----------|
