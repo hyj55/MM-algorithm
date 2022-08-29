@@ -19,10 +19,20 @@ Besides the algorithms, the package also provides corresponding data generations
 The package contains two parts as mentioned above, MM_algorithm and Data_generation.
 
 ### MM_algorithm <a name="mm_alg"></a>
-The input & output list for consultation.
-|Inputs.         |
+The lists of functions with their corresponding inputs & outputs for consultation.
+#### functions
+|function name|inputs|outputs|
+|-------------|----------|-----------|
+||||
+#### Input parameters
 |name|discription|
 |----|-----------|
+|size|***int(>0)*** <br> The number of players|
+|**graphs|***ndarray of shape (size,size)***, *the input format must be:* <br>``` # when J = 5: ```<br> ```graph_1 = graph_1, graph_2 = graph_2, graph_3 = graph_3, graph_4 = graph_4, graph_5 = graph_5; ```<br> ```# when J = 4: ```<br> ```graph_1 = graph_1, graph_2 = graph_2, graph_3 = graph_3, graph_4 = graph_4;``` <br> ```# when J = 3: ```<br>``` win_graph = win_graph, tie_graph = tie_graph;``` <br> ```# when J = 2: ```<br> ```win_graph = win_graph``` <br> The pairwise comparison graphs, record the results of comparisons for each level.<br> i.e. The *ij_th* term of *graph_4* records the number of times the comparisons between players *i* and *j* are measured to be 4.|
+#### Output parameters
+|name|discription|
+|----|-----------|
+|||
 
 ### Data_generation <a name="data_generation"></a>
 The input & output list for consultation.
