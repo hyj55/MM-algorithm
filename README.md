@@ -9,7 +9,7 @@
 
 ## General Informations <a name="general_info"></a>
 A package for MM algorithm for solving MLE of latent scores of each player in pairwise comprison models.\
-Note that the pairwise compirisons are measured on an ordinal scale. The package contains algorithms for models supporting the ordinal scale of levels J=2,3,4,5.\
+Note that here the pairwise compirisons are measured on an ordinal scale. The package contains algorithms for models supporting the ordinal scale of levels J=2,3,4,5.\
 Besides the algorithms, the package also provides corresponding data generations for simulation use.
 
 ## Installation <a name="install"></a>
@@ -23,8 +23,11 @@ The lists of functions with their corresponding inputs & outputs for consultatio
 #### functions
 |function name|discription|inputs|outputs|
 |-------------|-----------|------|-------|
-|mmAlgorithm_bt(iteration=1000,error=1e-5)|MM algorithm for Bradely-Terry Model, only for J=2 cases|**function input**: <br>iteration(num_iteration), error(l inf norm of gamma estimation error)<br> **class input**:<br>graphs for J=2|||
-|||||
+|mmAlgorithm_bt(iteration=1000,error=1e-5)|MM algorithm for Bradely-Terry Model, only for J=2 cases|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error)<br> **class input**:<br>size<br>graphs for J=2|estimation(for latent scores gamma)|
+|Davidson(iteration=1000,error=1e-9)|MM algorithm for Davidson Model, only for J=3 cases, theta is to be estimated|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error)<br> **class input**:<br>size<br>graphs for J=3|estimation, estimation_theta|
+|Davidson_given_theta(iteration=1000,error=1e-9,theta=1)|MM algorithm for Davidson Model, only for J=3 cases, theta is given|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error),<br>theta(another parameter in model for allowing existance of ties) <br>**class input**:<br>size<br>graphs for J=3|estimation|
+|Rao_Kupper(iteration=1000,error=1e-9)|MM algorithm for Rao-Kupper Model, only for J=3 cases, theta is to be estimated|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error)<br> **class input**:<br>size<br>graphs for J=3|estimation, estimation_theta|
+|Rao_Kupper_given_theta(self,iteration=1000,error=1e-9,theta=1.5)(iteration=1000,error=1e-9,theta=1)|MM algorithm for Rao-Kupper Model, only for J=3 cases, theta is given|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error),<br>theta<br>**class input**:<br>size<br>graphs for J=3|estimation|
 #### Input for ***class MMAlgorithm***
 |name|discription|
 |----|-----------|
