@@ -23,7 +23,7 @@ The lists of functions with their corresponding inputs & outputs in ***Class MM_
 #### functions
 |function name|discription|inputs|outputs|
 |-------------|-----------|------|-------|
-|mmAlgorithm_bt(iteration=1000,error=1e-5)|MM algorithm for Bradely-Terry Model, only for J=2 cases|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error)<br> **class input**:<br>size<br>graphs for J=2|estimation(for latent scores gamma)|
+|mmAlgorithm_bt(iteration=1000,error=1e-5)|MM algorithm for Bradely-Terry Model, only for J=2 cases|**function input**: <br>*iteration*(num_iteration),<br> error(l inf norm of gamma estimation error)<br> **class input**:<br>size<br>graphs for J=2|estimation(for latent scores gamma)|
 |Davidson(iteration=1000,error=1e-9)|MM algorithm for Davidson Model, only for J=3 cases, theta is to be estimated|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error)<br> **class input**:<br>size<br>graphs for J=3|estimation, estimation_theta|
 |Davidson_given_theta(iteration=1000,error=1e-9,theta=1)|MM algorithm for Davidson Model, only for J=3 cases, theta is given|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error),<br>theta(another parameter in model for allowing existance of ties) <br>**class input**:<br>size<br>graphs for J=3|estimation|
 |Rao_Kupper(iteration=1000,error=1e-9)|MM algorithm for Rao-Kupper Model, only for J=3 cases, theta is to be estimated|**function input**: <br>iteration(num_iteration),<br> error(l inf norm of gamma estimation error)<br> **class input**:<br>size<br>graphs for J=3|estimation, estimation_theta|
