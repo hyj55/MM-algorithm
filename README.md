@@ -50,10 +50,10 @@ Detailed discriptions for inputs & outputs of class and its functions are listed
 |name|discription|
 |----|-----------|
 |iteration|***int (>0)***,<br> the maximum number of iterations allowed|
-|error|***float***,<br>the l inf norm of the difference between estimated gammas from the last two iterations|
-|theta|***float***,<br>|
-|theta_1|***float***,<br>|
-|theta_2|***float***,<br>|
+|error|***float***,<br>the $l_{\infty}$ norm of the difference between estimated $\gamma$s from the last two iterations, i.e. $||\gamma^{k-1}-\gamma^{k}||_{\infty}$, where *k* is the last iteration.|
+|theta|***float (>=1)***,<br> |
+|theta_1|***float (1<=theta_1<=theta_2)***,<br> |
+|theta_2|***float (1<=theta_1<=theta_2)***,<br> |
 #### Outputs of functions
 |name|discription|
 |----|-----------|
