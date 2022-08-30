@@ -18,7 +18,7 @@ For function informations of both classes together with code examples, please fi
 
 
 ## Usage <a name="useage"></a>
-function informations including function discriptions, inputs & outputs are listed in **Class MM_algorithm** & **Class Data_generation**, detailed usage with code examples are provided in **Example**.
+Function informations including function discriptions, inputs & outputs are listed in **Class MM_algorithm** \& **Class Data_generation**, detailed usage with code examples are provided in **Example**.
 
 ### Class MM_algorithm <a name="mm_alg"></a>
 The list of functions with their corresponding inputs & outputs in ***Class MM_algorithm*** for consultation.
