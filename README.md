@@ -62,7 +62,7 @@ Detailed discriptions for inputs & outputs of class and its functions are listed
 |estimation_theta|***float***,<br>The estimated value of $\theta$|
 |estimation_theta_1|***float***,<br>The estimated value of $\theta_1$|
 |estimation_theta_2|***float***,<br>The estimated value of $\theta_2$|
-|index|***ndarray of shape (size*,),*** *size\** is the number of players after the truncation.<br> The index of the remaining players after the truncation.|
+|index|***ndarray of shape (size\*,),*** *size\** is the number of players after the truncation.<br> The index of the remaining players after the truncation.|
 
 ### Class Data_generation <a name="data_generation"></a>
 The data generation of the inputs required by the above algorithms are provided for simulation/testing.
