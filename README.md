@@ -78,7 +78,7 @@ Below find the lists of functions with their corresponding inputs & outputs in *
 |generate_five_data_clm|Generates data for Cumulative Link Model, only for J=5|no function input.<br> ***class inputs***:<br> size, num_game, dynamic_range, sparsity, <br>\*\*theta (J=5)|graph_5, graph_4, graph_3, graph_2, graph_1, gamma|
 |generate_five_data_aclm|Generates data for Adjacent Categories Logit Model, only for J=5|no function input.<br> ***class inputs***:<br> size, num_game, dynamic_range, sparsity, <br>\*\*theta (J=5)|graph_5, graph_4, graph_3, graph_2, graph_1, gamma|
 
-#### Inputs of ***class Data_generation***
+#### Inputs of ***Class Data_generation***
 |name|discription|
 |-|-------          |
 |size|***int (>0)***,<br> The number of players|
@@ -88,6 +88,20 @@ Below find the lists of functions with their corresponding inputs & outputs in *
 |\*\*theta|***float (>1)*** *the input format must be:* <br> ```# when J=5:```<br>```theta_1 = theta_1, theta_2 = theta_2```<br>```# when J=4,3:```<br>```theta = theta```<br>```# when J<3:```<br>```theta=0```|
 
 #### Outputs of functions
-
+|name|discription|
+|----|-------    |
+|Players|***ndarray of shape (size,)***,<br> an array of the form $\[0,1,2,...,n\]$, where n is the number of players.|
+|win_graph|***ndarray of shape (size,size)***, <br> The pairwise comparison graph, only record the wining results of comparisons.<br> i.e. The *ij_th* term of the graph records the number of times when player *i* beats *j*.|
+|tie_graph|***ndarray of shape (size,size)***, <br>The pairwise comparison graphs, only record the tie results of comparisons.<br> i.e. The *ij_th* term of the graph records the number of times when players *i* and *j* are tied.|
+|graph_n|***ndarray of shape (size,size)***, <br> The pairwise comparison graph, record the results of comparisons for each level.<br> i.e. The *ij_th* term of *graph_n* records the number of times the comparisons between players *i* and *j* are measured to be n.|
+|gamma|***ndarray of shape (size,)***, <br> the latent scores of the players, i.e., gammma\[n\] is the score of n+1_th player.|
+***Remark:***\
+*The comparison graphs are generated according to the corresponding gamma and model.*\
 
 ### Example <a name="exp"></a>
+
+
+
+
+
+
