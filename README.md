@@ -100,7 +100,8 @@ Below find the lists of functions with their corresponding inputs & outputs in *
 *The comparison graphs are generated according to the corresponding gamma and model.*
 
 ### Example <a name="exp"></a>
-Sample code of using functions.
+Sample code of using functions. You can copy & modify & run the code.
+
 ```python
 
 import numpy as np
