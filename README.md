@@ -22,7 +22,7 @@ Function informations including function discriptions, inputs & outputs are list
 
 ### Class MM_algorithm <a name="mm_alg"></a>
 The list of functions with their corresponding inputs & outputs in ***Class MM_algorithm*** for consultation.
-#### functions
+#### Functions
 |function name|discription|inputs|outputs|
 |-|------------------|----------|--------|
 |mmAlgorithm_bt(iteration=1000,error=1e-5)|MM algorithm for Bradely-Terry Model, only for J=2 cases|**function input**: <br>-*iteration*(num_iteration),<br> -*error*(estimation error)<br> **class input**:<br>-*size*<br>-*graphs* for J=2|estimation(for latent scores gamma)|
@@ -68,7 +68,7 @@ Detailed discriptions for inputs & outputs of class and its functions are listed
 ### Class Data_generation <a name="data_generation"></a>
 The data generation of the inputs required by the above algorithms are provided for simulation/testing.
 Below find the lists of functions with their corresponding inputs & outputs in ***Class Data_generation*** for consultation.
-#### functions
+#### Functions
 |function name|discription|inputs|outputs|
 |-|---------------------           |--|--|
 |data_generation_rao|Generates data for Rao-Kupper Model, only for J=3|no function input.<br> ***class inputs***:<br> size, num_game, dynamic_range, sparsity, <br>\*\*theta (J<3)|Players, win_graph, tie_graph, gamma|
@@ -95,6 +95,7 @@ Below find the lists of functions with their corresponding inputs & outputs in *
 |tie_graph|***ndarray of shape (size,size)***, <br>The pairwise comparison graphs, only record the tie results of comparisons.<br> i.e. The *ij_th* term of the graph records the number of times when players *i* and *j* are tied.|
 |graph_n|***ndarray of shape (size,size)***, <br> The pairwise comparison graph, record the results of comparisons for each level.<br> i.e. The *ij_th* term of *graph_n* records the number of times the comparisons between players *i* and *j* are measured to be n.|
 |gamma|***ndarray of shape (size,)***, <br> the latent scores of the players, i.e., gammma\[n\] is the score of n+1_th player.|
+
 ***Remark:***\
 *The comparison graphs are generated according to the corresponding gamma and model.*\
 
