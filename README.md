@@ -53,9 +53,9 @@ Detailed discriptions for inputs & outputs of class and its functions are listed
 |----|-----------|
 |iteration|***int (>0)***,<br> the maximum number of iterations allowed|
 |error|***float***,<br>the $l_{\infty}$ norm of the difference between estimated latent scores $\gamma$s from the last two iterations, <br> i.e. $\lVert\gamma^{k-1}-\gamma^{k}\rVert_{\infty}$, where *k* is the last iteration.|
-|theta|***float (>=1)***,<br> another parameter $\theta$ in model for allowing existance of ties|
-|theta_1|***float (1<=theta_1<=theta_2)***,<br> a parameter $\theta_1$ except for $\gamma$ in model of level J=4,5; related to the cutpoints for level measurements.|
-|theta_2|***float (1<=theta_1<=theta_2)***,<br> another parameter $\theta_2$ except for $\gamma$ in model of level J=4,5; also related to the cutpoints for level measurements.|
+|theta|***float (>=1)***,<br> another parameter $\theta$ in model of level J=3,4; related to the cutpoints for level measurements.|
+|theta_1|***float (1<=theta_1<=theta_2)***,<br> a parameter $\theta_1$ except for $\gamma$ in model of level J=5; related to the cutpoints for level measurements.|
+|theta_2|***float (1<=theta_1<=theta_2)***,<br> another parameter $\theta_2$ except for $\gamma$ in model of level J=5; also related to the cutpoints for level measurements.|
 #### Outputs of functions
 |name|discription|
 |----|-----------|
@@ -68,6 +68,7 @@ Detailed discriptions for inputs & outputs of class and its functions are listed
 ### Class Data_generation <a name="data_generation"></a>
 The data generation of the inputs required by the above algorithms are provided for simulation/testing.
 Below find the lists of functions with their corresponding inputs & outputs in ***Class Data_generation*** for consultation.
+#### functions
 |function name|discription|inputs|outputs|
 |-|---------------------           |--|--|
 |data_generation_rao|Generates data for Rao-Kupper Model, only for J=3|no function input.<br> ***class inputs***:<br> size, num_game, dynamic_range, sparsity, <br>\*\*theta (J<3)|Players, win_graph, tie_graph, gamma|
@@ -77,7 +78,16 @@ Below find the lists of functions with their corresponding inputs & outputs in *
 |generate_five_data_clm|Generates data for Cumulative Link Model, only for J=5|no function input.<br> ***class inputs***:<br> size, num_game, dynamic_range, sparsity, <br>\*\*theta (J=5)|graph_5, graph_4, graph_3, graph_2, graph_1, gamma|
 |generate_five_data_aclm|Generates data for Adjacent Categories Logit Model, only for J=5|no function input.<br> ***class inputs***:<br> size, num_game, dynamic_range, sparsity, <br>\*\*theta (J=5)|graph_5, graph_4, graph_3, graph_2, graph_1, gamma|
 
+#### Inputs of ***class Data_generation***
+|name|discription|
+|-|-------          |
+|size|***int (>0)***,<br> The number of players|
+|num_game|***int (>0)***,<br> The maximum number of games between each pair of players|
+|dynamic_range|***float (>0)***, <br> related to the range of latent score $\gamma$|
+|sparsity|***float (\[0,1\])***, <br> related to the frequency of the occurence of a game between each pair of players|
+|\*\*theta|***float (>1)*** *the input format must be:* <br> ```# when J=5:```<br>```theta_1 = theta_1, theta_2 = theta_2```<br>```# when J=4,3:```<br>```theta = theta```<br>```# when J<3:```<br>```theta=0```|
 
+#### Outputs of functions
 
 
 ### Example <a name="exp"></a>
