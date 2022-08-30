@@ -97,10 +97,41 @@ Below find the lists of functions with their corresponding inputs & outputs in *
 |gamma|***ndarray of shape (size,)***, <br> the latent scores of the players, i.e., gammma\[n\] is the score of n+1_th player.|
 
 ***Remark:***\
-*The comparison graphs are generated according to the corresponding gamma and model.*\
+*The comparison graphs are generated according to the corresponding gamma and model.*
 
 ### Example <a name="exp"></a>
+Sample code of using functions.
+```python
 
+import numpy as np
+import J_5
+from J_5 import data_generation_all
+from J_5 import MMAlgorithm_all
+from data_generation_all import data_generation
+from MMAlgorithm_all import MMAlgorithm
+
+# test
+# cumulative link model, J=5
+# data generation
+data=data_generation(size=20,num_game=10,dynamic_range=2, sparsity=1, theta_1=2, theta_2=2)
+graph_5, graph_4, graph_3, graph_2, graph_1, gamma = data.generate_five_data_clm()
+
+# compute parameters gamma & thetas using algorithms
+alg=MMAlgorithm(size=20, graph_5=graph_5, graph_4=graph_4, graph_3=graph_3, graph_2=graph_2, graph_1=graph_1)
+alg.clm_5_given_theta(theta_1=2,theta_2=2)
+alg.clm_5()
+
+# adjacent categories logit model, J=5
+# data generation
+data=data_generation(size=100,num_game=10,dynamic_range=2, sparsity=1, theta_1=10, theta_2=20)
+graph_5, graph_4, graph_3, graph_2, graph_1, gamma = data.generate_five_data_aclm()
+
+# compute parameters gamma & thetas using algorithms
+alg=MMAlgorithm(size=100, graph_5=graph_5, graph_4=graph_4, graph_3=graph_3, graph_2=graph_2, graph_1=graph_1)
+alg.aclm_5_given_theta(theta_1=9,theta_2=9)
+alg.aclm_5()
+
+```
 
 
 
