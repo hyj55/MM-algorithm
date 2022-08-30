@@ -50,7 +50,7 @@ Detailed discriptions for inputs & outputs of class and its functions are listed
 |name|discription|
 |----|-----------|
 |iteration|***int (>0)***,<br> the maximum number of iterations allowed|
-|error|***float***,<br>the $l_{\infty}$ norm of the difference between estimated $\gamma$s from the last two iterations, <br> i.e. $\lVert\gamma^{k-1}-\gamma^{k}\rVert_{\infty}$, where *k* is the last iteration.|
+|error|***float***,<br>the $l_{\infty}$ norm of the difference between estimated latent scores $\gamma$s from the last two iterations, <br> i.e. $\lVert\gamma^{k-1}-\gamma^{k}\rVert_{\infty}$, where *k* is the last iteration.|
 |theta|***float (>=1)***,<br> |
 |theta_1|***float (1<=theta_1<=theta_2)***,<br> |
 |theta_2|***float (1<=theta_1<=theta_2)***,<br> |
