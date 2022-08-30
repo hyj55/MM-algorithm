@@ -11,7 +11,7 @@
 ## General Informations <a name="general_info"></a>
 A package for MM algorithm for solving MLE of latent scores of each player in pairwise comprison models.\
 Note that here the pairwise compirisons are measured on an ordinal scale. The package contains algorithms for models supporting the ordinal scale of levels J=2,3,4,5.\
-Besides the algorithms, the package also provides corresponding data generations for simulation use.\
+Besides the algorithms, the package also provides corresponding data generations for models of levels J=3,4,5 for simulation use.
 For function informations of both classes together with code examples, please find in the **Usage**.
 
 ## Installation <a name="install"></a>
@@ -70,6 +70,14 @@ The data generation of the inputs required by the above algorithms are provided 
 Below find the lists of functions with their corresponding inputs & outputs in ***Class Data_generation*** for consultation.
 |function name|discription|inputs|outputs|
 |-|---------------------           |--|--|
-|||||
+|data_generation_rao|Generates data for Rao-Kupper Model, only for J=3|no function input.<br> ***class inputs***:<br> size, num_game, dynamic_range, sparsity, <br>\*\*theta (J<3)|Players, win_graph, tie_graph, gamma|
+|data_generation_davi|Generates data for Davidson Model, only for J=3|no function input.<br> ***class inputs***:<br> size, num_game, dynamic_range, sparsity, <br>\*\*theta (J=3,4)|Players, win_graph, tie_graph, gamma|
+|generate_four_data_clm|Generates data for Cumulative Link Model, only for J=4|no function input.<br> ***class inputs***:<br> size, num_game, dynamic_range, sparsity,<br> \*\*theta (J=3,4)|graph_4, graph_3, graph_2, graph_1, gamma|
+|generate_four_data_aclm|Generates data for Adjacent Categories Logit Model, only for J=4|no function input.<br> ***class inputs***:<br> size, num_game, dynamic_range, sparsity, <br>\*\*theta (J=3,4)|graph_4, graph_3, graph_2, graph_1, gamma|
+|generate_five_data_clm|Generates data for Cumulative Link Model, only for J=5|no function input.<br> ***class inputs***:<br> size, num_game, dynamic_range, sparsity, <br>\*\*theta (J=5)|graph_5, graph_4, graph_3, graph_2, graph_1, gamma|
+|generate_five_data_aclm|Generates data for Adjacent Categories Logit Model, only for J=5|no function input.<br> ***class inputs***:<br> size, num_game, dynamic_range, sparsity, <br>\*\*theta (J=5)|graph_5, graph_4, graph_3, graph_2, graph_1, gamma|
+
+
+
 
 ### Example <a name="exp"></a>
