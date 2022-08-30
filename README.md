@@ -3,8 +3,9 @@
 - [General Informations](#general_info)
 - [Installation](#install)
 - [Usage](#useage)
-    - [MM_algorithm](#mm_alg)
-    - [Data_generation](data_generation)
+    - [Class MM_algorithm](#mm_alg)
+    - [Class Data_generation](#data_generation)
+    - [Example](#exp)
 
 
 ## General Informations <a name="general_info"></a>
@@ -16,7 +17,7 @@ Besides the algorithms, the package also provides corresponding data generations
 
 
 ## Usage <a name="useage"></a>
-The package contains two parts as mentioned above, MM_algorithm and Data_generation.
+The package contains two parts as mentioned above, MM_algorithm and Data_generation. Some general informations are listed, detailed usage with examples are provided in **Example**.
 
 ### Class MM_algorithm <a name="mm_alg"></a>
 The list of functions with their corresponding inputs & outputs in ***Class MM_algorithm*** for consultation.
@@ -61,8 +62,13 @@ Detailed discriptions for inputs & outputs of class and its functions are listed
 |estimation_theta|***float***,<br>The estimated value of $\theta$|
 |estimation_theta_1|***float***,<br>The estimated value of $\theta_1$|
 |estimation_theta_2|***float***,<br>The estimated value of $\theta_2$|
-|index||
+|index|***ndarray of shape (size*,),*** *size\** is the number of players after the truncation.<br> The index of the remaining players after the truncation.|
 
 ### Class Data_generation <a name="data_generation"></a>
-The lists of functions with their corresponding inputs & outputs in ***Class Data_generation*** for consultation.
+The data generation of the inputs required by the above algorithms are provided for simulation/testing.
+Below find the lists of functions with their corresponding inputs & outputs in ***Class Data_generation*** for consultation.
+|function name|discription|inputs|outputs|
+|-|---------------------           |--|--|
+|||||
 
+### Example <a name="exp"></a>
