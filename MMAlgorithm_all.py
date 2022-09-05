@@ -652,8 +652,7 @@ class MMAlgorithm:
             constant_left=np.sum(graph_2+graph_4)
             down_mtx=2*(graph_1+graph_2)*current_probability/(transpose_current_probability+initial_theta_2*current_probability)
             initial_theta_2=constant_left/np.sum(down_mtx)+initial_theta_1
-            print('theta2')
-            print(initial_theta_2)
+          
 
             # theta 1
             
@@ -664,12 +663,10 @@ class MMAlgorithm:
             p3 = np.sum(graph_2+graph_4)+C_k*initial_theta_2
             p=[C_k,p1,p2,p3]
             roots=np.roots(p)
-            print('roots')
-            print(roots)
+           
             real_roots=roots.real[abs(roots.imag)<1e-4]
             real_roots_positive = real_roots[0<real_roots]
-            print('real roots')
-            print(real_roots)
+            
             real_roots_truncated = real_roots_positive[real_roots_positive<=initial_theta_2]
             
             # initial_theta_1=max(real_roots_truncated)
@@ -681,8 +678,6 @@ class MMAlgorithm:
             else:
                 initial_theta_1=min(real_roots_positive)
                 
-            print('init theta 1')
-            print(initial_theta_1)
             
             
             if np.max(np.abs(last - initial_K)) < error:
