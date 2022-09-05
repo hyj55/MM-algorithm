@@ -66,7 +66,7 @@ Detailed discriptions for inputs & outputs of class and its functions are listed
 |index|***ndarray of shape (size\*,),*** *size\** is the number of players after the truncation.<br> The index of the remaining players after the truncation.|
 
 ### Class Data_generation <a name="data_generation"></a>
-The data generation of the inputs required by the above algorithms are provided for simulation/testing.
+The data generation of the inputs required by the above algorithms are provided for simulation/testing, including comparison graphs and the latent scores $\gamma$ behand.
 Below find the lists of functions with their corresponding inputs & outputs in ***Class Data_generation*** for consultation.
 #### Functions
 |function name|discription|inputs|outputs|
