@@ -105,9 +105,9 @@ Sample code of using functions. You can copy & modify & run the code.
 ```python
 
 import numpy as np
-import J_5
-from J_5 import data_generation_all
-from J_5 import MMAlgorithm_all
+# import J_5
+# from J_5 import data_generation_all
+# from J_5 import MMAlgorithm_all
 from data_generation_all import data_generation
 from MMAlgorithm_all import MMAlgorithm
 
