@@ -119,7 +119,6 @@ graph_5, graph_4, graph_3, graph_2, graph_1, gamma = data.generate_five_data_clm
 
 # compute parameters gamma & thetas using algorithms
 alg=MMAlgorithm(size=20, graph_5=graph_5, graph_4=graph_4, graph_3=graph_3, graph_2=graph_2, graph_1=graph_1) # notice that the value of "size" should be consistent from data generation to algorithm implementation. 
-
 alg.clm_5_given_theta(theta_1=2,theta_2=2)
 alg.clm_5()
 
