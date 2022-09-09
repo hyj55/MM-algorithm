@@ -1,7 +1,6 @@
 # MM algorithm
 ## Table of Contents
 - [General Informations](#general_info)
-- [Installation](#install)
 - [Usage](#useage)
     - [Class MM_algorithm](#mm_alg)
     - [Class Data_generation](#data_generation)
@@ -14,7 +13,6 @@ Note that here the pairwise compirisons are measured on an ordinal scale. The pa
 Besides the algorithms, the package also provides corresponding data generations for models of levels J=3,4,5 for simulation use.
 For function informations of both classes together with code examples, please find in the **Usage**.
 
-## Installation <a name="install"></a>
 
 
 ## Usage <a name="useage"></a>
