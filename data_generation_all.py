@@ -17,7 +17,7 @@ class data_generation:
         ----------
         size : The  number of players involved in the comparison.
         
-        theta : parameter for ties, input should be larger than 1 and follow the format:
+        theta : Global parameter ("threshold" parameter), input should be larger than 1 and follow the format:
             when J=5:
                 theta_1 = theta_1, theta_2 = theta_2
             when J=4,3:
