@@ -4,7 +4,7 @@
 - [Usage](#useage)
     - [Class MM_algorithm](#mm_alg)
     - [Class Data_generation](#data_generation)
-    - [Example](#exp)
+    - [Implementation](#exp)
 
 
 ## General Informations <a name="general_info"></a>
@@ -97,8 +97,8 @@ Below find the lists of functions with their corresponding inputs & outputs in *
 ***Remark:***\
 *The comparison graphs are generated according to the corresponding gamma and model.*
 
-### Example <a name="exp"></a>
-Sample code of using functions. You can copy & modify & run the code.
+### Implementation <a name="exp"></a>
+Sample code for using the functions. 
 
 ```python
 
